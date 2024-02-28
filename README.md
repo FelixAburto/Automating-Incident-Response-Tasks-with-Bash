@@ -230,6 +230,7 @@ The final step, Recovery, is about restoring and stabilizing the affected system
      <p align="center">
      <img src="https://i.imgur.com/1QK6pnm.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
      </p>
+   - Blocking the attacker's email address used for the phishing email      
    - Conducting User Awareness Training to inform the user about phishing attacks and other social engineering attacks.
  
 

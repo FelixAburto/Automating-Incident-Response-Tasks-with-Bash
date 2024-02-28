@@ -262,7 +262,6 @@ The Post-Incident Activity phase is the final stage of the incident response lif
 
 For this scenario we are going to assume that our incident response team when through all key activities for this phase and that our Incident Response Handling Procedures is now properly updated.
 
-<h2>Incident Response Report</h2>
 
 
 

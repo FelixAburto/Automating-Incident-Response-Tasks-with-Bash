@@ -97,7 +97,7 @@ The malicious actor attempts to copy the file but fails due to restricted file p
 The malicious actor tries to read the file permissions of the confidential file which triggers the file integrity monitor script:
 
 <p align="center">
-<img src="https://i.imgur.com/gLo0C5N.gif" height="100%" width="100%" alt="Image Analysis Dataflow"/>
+<img src="https://i.imgur.com/gLo0C5N.gif" height="150%" width="150%" alt="Image Analysis Dataflow"/>
 </p>
 
 <br />
@@ -194,7 +194,7 @@ The final step, Recovery, is about restoring and stabilizing the affected system
     - Logs out all users from their current logon session and changes the password of all account on the system. This prevents local threats from accessing the confidential file. 
 
        <p align="center">
-       <img src="https://i.imgur.com/gLo0C5N.gif" height="85%" width="85%" alt="Image Analysis Dataflow"/>
+       <img src="https://i.imgur.com/gLo0C5N.gif" height="150%" width="150%" alt="Image Analysis Dataflow"/>
        </p>
        
     - Shuts down all network interfaces on the system. This completely removes the system from all networks preventing remote threats from accessing the confidential file. 

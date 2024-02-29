@@ -211,7 +211,7 @@ The final step, Recovery, is about restoring and stabilizing the affected system
      <img src="https://i.imgur.com/rjoYThU.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
      </p>
 
-### **Remediation:**
+### **Recovery:**
 
 - For this step we can remediate the system by ensuring that the system is secure. We can do this by performing these tasks:
    - Removing Administrator privilges from the user account

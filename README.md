@@ -24,7 +24,7 @@ The aim of this project is to demonstrate a security incident and detail the res
 
 One of the employees received a phishing email and unwittingly downloaded a malicious PDF file. Upon opening the PDF, the employee noticed nothing was displayed. Assuming it was harmless, the employee disregarded it and continued with their day. Unbeknownst to them, the PDF was actually a Trojan that had installed a backdoor on their system. A malicious actor now has access to the system via OpenSSH and has started searching for any sensitive data they can steal. On the system there is a confidential file that should only be accessed by authorized users. 
 
-<h2>Preperation</h2>
+<h2>Preparation</h2>
 
 The preparation phase is a crucial part of the incident response process. This phase involves establishing and maintaining the capability to respond effectively to incidents. Key elements of the preparation phase include:
 
@@ -59,7 +59,7 @@ The goal of the preparation phase is to ensure that when an incident occurs, the
 
 <br />
 
-In this scenario we are going to assume that the company has taken all the necessary steps for proper preperation. The system administrator also implemented the proper file permissions on the confidential file and has a file monitor script running that was provided by a security analyst for an additional layer of protection.
+In this scenario we are going to assume that the company has taken all the necessary steps for proper preparation. The system administrator also implemented the proper file permissions on the confidential file and has a file monitor script running that was provided by a security analyst for an additional layer of protection.
 
 <p align="center">
   <img src="https://i.imgur.com/qL8A8Po.png" width="500" />
@@ -70,7 +70,7 @@ In this scenario we are going to assume that the company has taken all the neces
 
 <h2>The Security Incident</h2>
 
-The malicous actor connects to the system through openSSH:
+The malicious actor connects to the system through OpenSSH:
 
 <p align="center">
 <img src="https://i.imgur.com/aCbt89g.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
@@ -78,7 +78,7 @@ The malicous actor connects to the system through openSSH:
 
 <br />
 
-The malicious actor access the root account and traverses through the file system and finds a confidential file:
+The malicious actor accesses the root account and traverses through the file system and finds a confidential file:
 
 <p align="center">
 <img src="https://i.imgur.com/uTNqELK.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
@@ -118,7 +118,7 @@ The Detection and Analysis phase involves identifying potential security inciden
 
 ### **Detection:**
    - We get an alert describing that the system that contains confidential files has been logged in and that the password has changed during off hours.
-   - We try to log in with the password that the script sets to all accounts if unauthorized access to the file is detected. We are successful which comfirms that someone has tried to access confidential data.
+   - We try to log in with the password that the script sets to all accounts if unauthorized access to the file is detected. We are successful which confirms that someone has tried to access confidential data.
    - ***(Note: In a real world scenario you would want this password to be as secure as possible to avoid further access attempts.)*** 
  
 <p align="center">
@@ -139,7 +139,7 @@ The Detection and Analysis phase involves identifying potential security inciden
    - The script has created these files:
      <br />
 
-        - **UNAUTH_ACCESS.txt:** This file contains information from the auditd logs. From these logs we can determine when and who tried to access the confidentail file. From the logs we can tell that the original user who initiated the process was "user1" and from there they accessed the root account.
+        - **UNAUTH_ACCESS.txt:** This file contains information from the auditd logs. From these logs we can determine when and who tried to access the confidential file. From the logs we can tell that the original user who initiated the process was "user1" and from there they accessed the root account.
 
       <p align="center">
       <img src="https://i.imgur.com/IoQujx2.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
@@ -158,13 +158,13 @@ The Detection and Analysis phase involves identifying potential security inciden
        <img src="https://i.imgur.com/07uTUXk.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
        </p>
       
-        - **HASH_COMPARISON.txt:** The script contains a known good SHA256 hash value and when the unauthorized access is detected the script recalculates the SHA256 hash of the file and outputs both the known and the calculated hash. This helps us determine if the integirty of the confidential file was compromised. As we can see both the hash values are the same which indicates that file integridy was preserved.
+        - **HASH_COMPARISON.txt:** The script contains a known good SHA256 hash value and when the unauthorized access is detected the script recalculates the SHA256 hash of the file and outputs both the known and the calculated hash. This helps us determine if the integrity of the confidential file was compromised. As we can see both the hash values are the same which indicates that file integrity was preserved.
      
        <p align="center">
        <img src="https://i.imgur.com/Geo8THE.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
        </p>
 
-     - Other Analysis: We ask the user of this system if they had recently notice any unusual behavior on their system. The employee tells us that there was this incident where he downloaded a pdf file thinking it was an invoice and when they tried to open it there was a black box that flashed breifly but nothing else happened. They figured the file was corrupt and went about their day. Upon further investigation we determine that the pdf file was downloaded from a phishing email that they had recieved. 
+     - Other Analysis: We ask the user of this system if they had recently notice any unusual behavior on their system. The employee tells us that there was this incident where he downloaded a pdf file thinking it was an invoice and when they tried to open it there was a black box that flashed briefly but nothing else happened. They figured the file was corrupt and went about their day. Upon further investigation we determine that the pdf file was downloaded from a phishing email that they had received. 
 
        - **Email Phishing Analysis:** We download the eml file of the phishing email and extract relevant information for analysis
     
@@ -203,7 +203,7 @@ The final step, Recovery, is about restoring and stabilizing the affected system
        <img src="https://i.imgur.com/Kil7zCf.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
        </p>
       
- ### **Eradiction:**
+ ### **Eradication:**
  
 - The most effective method of eradication for this scenario is to restore from last known good backup. This will ensure that all traces of the trojan used to infiltrate the system is removed.
 
@@ -214,7 +214,7 @@ The final step, Recovery, is about restoring and stabilizing the affected system
 ### **Recovery:**
 
 - For this step we can remediate the system by ensuring that the system is secure. We can do this by performing these tasks:
-   - Removing Administrator privilges from the user account
+   - Removing Administrator privileges from the user account
      <p align="center">
      <img src="https://i.imgur.com/B7RIpVE.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
      </p>

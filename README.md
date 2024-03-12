@@ -129,7 +129,7 @@ The Detection and Analysis phase involves identifying potential security inciden
 
 ### **Analysis:** 
 
-   - Once the security analyst is logged in they can see that there are several txt files that were created on the desktop. This is due to the automating the task of investigating and extracting the information needed for further analysis.
+   - Once the security analyst is logged in they can see that there are several txt files that were created on the desktop. This results from automating the task of investigating and extracting the information needed for further analysis.
 
 
       <p align="center">
@@ -205,7 +205,7 @@ The final step, Recovery, is about restoring and stabilizing the affected system
       
  ### **Eradication:**
  
-- The most effective method of eradication for this scenario is to restore from last known good backup. This will ensure that all traces of the trojan used to infiltrate the system is removed.
+- The most effective method of eradication for this scenario is to restore from a last known good backup. This will ensure that all traces of the trojan used to infiltrate the system is removed.
 
      <p align="center">
      <img src="https://i.imgur.com/rjoYThU.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
@@ -261,7 +261,7 @@ The Post-Incident Activity phase is the final stage of the incident response lif
 ### Training and Awareness
 - Conducting training and raising awareness based on the lessons learned to improve skills and knowledge.
 
-For this scenario we are going to assume that our incident response team when through all key activities for this phase and that our Incident Response Handling Procedures is now properly updated.
+In this scenario, we will assume that our incident response team went through all key activities for this phase and that our Incident Response Handling Procedures are now properly updated.
 
 
 
